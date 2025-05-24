@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./IMG01/MAINlogo.png" />
+    <title>ChildCinema</title>
+    <link rel="stylesheet" href="/CSS/profile.css" />
+    <link rel="stylesheet" href="/CSS/general media-querie.css" />  
+</head>
+
+<body>
+    <section class="create-user">
+        <h2>Create a profile</h2>
+        <p>
+            We will try to customize YouTube Kids for your child's age. Only you and
+            your child can see this information.
+        </p>
+
+        <div class="profile">
+            <div class="avatar">
+                <img id="img" draggable="false" alt=""
+                    src="./HTML/IMG01/bck_avatar_kids_optimisticgiraffe_800.png"
+                    width="224" />
+            </div>
+            <div class="profile-info">
+                <input type="text" class="no-border" placeholder="Kids first Name*" data-error="nameError" required />
+                <span class="validation-message" id="nameError"></span>
+
+                <input type="text" class="no-border" placeholder="Age*" data-error="ageError" required />
+                <span class="validation-message" id="ageError"></span>
+
+                <input type="date" name="" id="" placeholder="Select a date" data-error="dateError" required />
+                <span class="validation-message" id="dateError"></span>
+            </div>
+        </div>
+        <div class="next-b">
+            <a href="./HTML/mainsignin.html" id="nextButton"><button>Next</button></a>
+        </div>
+    </section>
+
+    <script src="/JS/profile.js"></script>
+</body>
+
+</html>

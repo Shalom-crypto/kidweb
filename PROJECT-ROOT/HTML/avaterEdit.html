@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/CSS/main.css" />
+  <link rel="stylesheet" href="/CSS/playvideo.css" />
+  <link rel="stylesheet" href="/CSS/vidplayer-mq.css">
+  <link rel="stylesheet" href="/CSS/avaterEdit.css">
+  <link rel="icon" href="./IMG01/MAINlogo.png" />
+
+  <title>ChildCenima</title>
+</head>
+
+<body>
+  <!-- nav-bar -->
+  <nav class="flex-div">
+    <div class="nav-left flex-div">
+        <img src="IMG01/back-arrow.png" class="back-a" id="back-arrow" onclick="history.back()" />
+        <img class="avater" src="./IMG01/bck_avatar_kids_optimisticgiraffe_800.png" alt="logo" />
+    </div>
+
+    <div class="nav-middle flex-div">
+        <div class="search-box flex-div">
+            <input type="text" placeholder="Search ChildCenima" class="search-input" />
+            <img src="IMG01/search.svg" class="mic-icon" alt="" onclick="toggleSearchInput()" />
+        </div>
+    </div>
+
+    <div class="nav-right flex-div">
+        <a href="/PROJECT-ROOT/HTML/p-settings.html" class="flex-div">
+            <p>Privacy</p>
+            <img src="IMG01/lock.png" class="user-icon" alt="" />
+        </a>
+    </div>
+</nav>
+
+
+<!-- Main Content ================================================================-->
+<div class="hero-container">
+  <h1>Edit my profile</h1>
+  <div class="giraf-img">
+    <img src="./IMG01/bck_avatar_kids_optimisticgiraffe_800.png">
+
+    <div id="click-me">
+      <img src="./IMG01/Edit.png" class="Edit" alt="Edit">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  
+  <section class="Edit-section">
+    <div class="input-container">
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name" value="Great">
+    </div>
+
+  </section>
+
+     <div id="edit-container"> 
+      <h2>Pick a profile picture</h2> <img id="back" src="IMG01/goback.png" alt="">
+      <hr>
+      <div id="whole-img"> 
+        <img onclick="changeAvatar(this)" src="IMG01/img-profile1.png">
+        <img onclick="changeAvatar(this)" src="IMG01/img-profile2.png">
+        <img onclick="changeAvatar(this)" src="IMG01/img-profile3.png">
+        <img onclick="changeAvatar(this)" src="IMG01/img-profile4.png">
+        <img onclick="changeAvatar(this)" src="IMG01/img-profile5.png">
+        <img onclick="changeAvatar(this)" src="IMG01/img-profile6.png">
+        <img onclick="changeAvatar(this)" src="IMG01/img-profile8.png">
+        <img onclick="changeAvatar(this)" src="IMG01/img-profile9.png">
+        <img onclick="changeAvatar(this)" src="IMG01/img-profile11.png">
+      </div>
+    </div>
+
+    <section class="Edit-section1">
+      <img src="IMG01/iconmonstr-trash-can-14-48.png" alt="">
+   <h3 class="Edit-h">Reset history</h3>
+   <p>Clear browsing data including watched videos, search history, recommendations, and offline saved videos.</p>
+   <button class="clear"> Clear</button>
+    </section>
+
+    <section class="Edit-section1">
+      <img src="IMG01/iconmonstr-key-thin-48.png" alt="">
+   <h3 class="Edit-h">Pass Code</h3>
+   <p>With a secret code, nobody else can switch to your profile</p>
+   <button id="clear2"> Change</button>
+   <button id="clear3" class="clear2"> Remove</button>
+    </section>
+</div>
+<script src="/JS/main.js"></script>
+<script src="/JS/avaterEdit.js"></script>
+
+<script>
+function changeAvatar(clickedImg) {
+    var avatarImg = document.querySelector('.avater');
+    var backgroundImg = document.querySelector('.giraf-img img');
+    
+    avatarImg.src = clickedImg.src;
+    backgroundImg.src = clickedImg.src;
+}
+
+
+</script>
+
+</body>
+
+</html>

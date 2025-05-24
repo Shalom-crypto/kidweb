@@ -1,0 +1,254 @@
+/* ----------------------------------fan--animation---------------------------- */
+#hero{
+    animation:  infinite  alternate 2s 0.5s hero linear ;
+    transform-origin: center;
+    transform-box: fill-box;
+   
+
+}
+
+@keyframes hero {
+    0%{
+        transform: rotateZ(0deg);
+     }
+
+    50%{
+        transform: rotateZ(10deg);
+    }
+
+    100%{
+        transform: rotateZ(0deg);
+    }
+   
+    to{
+        transform: translateY(3px);
+    }
+}
+
+
+
+ #fan{
+    animation: infinite 1s fan linear;
+    transform-origin: top center;
+    transform-box:fill-box;
+
+}
+ @keyframes fan {
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+ }
+
+/*-------------------- wave animation---------------- */
+.wave {
+    display: inline-block;
+    font-size: 1em; 
+    animation: wave 1s infinite linear ;
+
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(20deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+}
+
+
+/* parent svg --------------------------------------------------*/
+
+@keyframes radiatorAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+#parent svg #radiator {
+    animation: radiatorAnimation 1s infinite;
+    
+}
+
+@keyframes light {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#parent svg #light {
+    animation: infinite linear 1s light;
+}
+
+@keyframes rightTurn {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    25% {
+        transform: rotateZ(-30deg);
+    }
+    50% {
+        transform: rotateZ(0deg);
+    }
+    75% {
+        transform: rotateZ(-30deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+#left-turn {
+    animation: rightTurn 2s forwards infinite;
+    
+    transform-origin: bottom center;
+    transform-box:fill-box;
+}
+
+
+@keyframes blink {
+    0%,
+    89%,
+    100% {
+       opacity: 0;
+    }
+    90%,
+    99% {
+       opacity: 1;
+    }
+}
+
+#eyes {
+    animation: blink 3s alternate infinite;
+}
+
+
+#face {
+    position: absolute;
+    animation: anticlockwise 5s infinite linear;
+    transform-origin: center center;
+    /* transform-box:fill-box; */
+    
+}
+
+@keyframes anticlockwise {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    25% {
+        transform: rotateZ(-10deg);
+    }
+    50% {
+        transform: rotateZ(0deg);
+    }
+    75% {
+        transform: rotateZ(-10deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+/* ====================== SIGN IN ANIMATION================================= */
+.image-container .image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -12%;
+    animation: avatar 5s ease-in-out infinite;
+    transform-origin: bottom;
+    transition: 500ms;
+ }
+ @keyframes avatar {
+    0%,
+    50%,
+    100% {
+       transform: rotate(0deg) translatey(0px) scale(1.05);
+    }
+    25% {
+       transform: rotate(5deg) translatey(5px) scale(1);
+    }
+    75% {
+       transform: rotate(-5deg) translatey(5px) scale(1);
+    }
+ }
+ 
+ .image-container .image:active {
+    translate: 0 50px;
+ }
+ .image-container img {
+    display: inline-block;
+    position: absolute;
+    transition: 100ms;
+ }
+ .image-container img.face {
+    width: 40%;
+    left: 30%;
+    bottom: 40%;
+    opacity: 0;
+ }
+ .image-container .face-1 {
+    opacity: 1;
+    animation: eye-open 2s ease-in-out infinite;
+ }
+ .image-container .face-2 {
+    animation: blink 2s ease-in-out infinite;
+ }
+ 
+ @keyframes blink {
+    0%,
+    89%,
+    100% {
+       opacity: 0;
+    }
+    90%,
+    99% {
+       opacity: 1;
+    }
+ }
+ @keyframes eye-open {
+    0%,
+    89%,
+    100% {
+       opacity: 1;
+    }
+    90%,
+    99% {
+       opacity: 0;
+    }
+ }
+ 
+ .image-container:hover img.face {
+    opacity: 0 !important;
+    animation: none;
+ }
+ .image-container:hover img.face-3 {
+    opacity: 1 !important;
+ }
+ 
+
+ /* =============================================== */
+
+ 

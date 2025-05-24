@@ -1,0 +1,277 @@
+
+@media (max-width: 680px) {
+  .intro-img img {
+    width: 70%;
+  }
+  section#content{
+    padding: 0;
+    height: fit-content;
+    /* margin: 10px 0; */
+    margin: 85px auto;
+    padding: 25px;
+
+  }
+.intro-img svg {
+    width: 70px;
+  }
+
+
+/* =====================================kids */
+section#kids{
+  margin: 90px auto;
+  height: fit-content;
+  padding: 50px 0;
+  
+}
+
+/* ============================parent */
+section#parent{
+  margin: 90px auto;
+  height: fit-content;
+  padding: 20px 0;
+  
+}
+
+/* ===========notice to p*/
+.m{margin: 0;
+font-size: 16px;
+}  
+div.scroll{
+  width: 85%;
+}
+.scroll h2{
+  margin: 20px;
+}
+
+/* ============profile */
+.create-user h2 {
+  margin: 0 0 015px;
+}
+
+  
+}
+/* ==================== for smaller phone-sized devices ================ */
+@media (max-width: 480px) {
+  .intro-img img {
+    width: 80%;
+  }
+
+  .intro-img svg {
+    width: 50px;
+  }
+
+  #content,
+  #kids,
+  #parent {
+    overflow: hidden;
+   min-width:95%;
+   
+  }
+
+  #content h1,
+  #kids h1,
+  #parent h1 {
+    font-size: 7vw;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    /* white-space: nowrap;  */
+  }
+
+  #parent h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .kidoo img {
+    max-width: 80%;
+  }
+  #kido {
+    word-spacing: 0;
+    letter-spacing: 0.3px;
+    white-space: wrap;
+    margin: auto;
+  }
+
+  .path {
+    font-size: 5vw;
+    text-align: center;
+  }
+
+  #content .btn button {
+    font-size: 1rem;
+    max-width: 20%;
+  }
+  .ok {
+    max-width: 20%;
+    font-size: 1rem;
+  }
+
+  #parent svg {
+    width: 90%;
+  }
+
+  /* ======================== NOTICE TO PARENTS MDQ=================== */
+
+  .scroll-parent {
+    width: 90%;
+    border-radius: 0%;
+  } 
+  .agree-btn{
+    width: 90%;
+  }
+
+  .card{
+    width: 90%;
+  }
+  .sch img{
+    width: 80%;
+}
+
+
+  /* ======================CARD============================ */
+
+ 
+ .content-select svg{
+  width: 65%;
+  margin-top: 15%;
+  margin-left: 5px;
+ }
+
+
+ .next-btn button{
+    width: 25%;
+    margin-top: 3%;
+    margin-left: -90px;
+    
+ }
+
+/* profile */
+ 
+  .create-user p {
+    width: 80%;
+    padding: 5px 8px 0;
+
+}
+  .avatar img{
+    width: 50%;
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
+  
+}
+
+
+
+
+/* ==================== for smaller phone-sized devices ================ */
+@media (min-width: 300px) {
+  #content,
+  #kids,
+  #parent {
+    /* height: 50vh; */
+   min-height: 10% !important;
+  }
+
+  .create-user p {
+    /* font-size: 80%; */
+    width: 90%;
+    padding: 0
+
+}
+.next-btn button{
+  bottom: 50px; 
+}
+.profile-info input{
+  width: 90%;
+}
+
+}
+
+
+/* ============================ TABLET ======================== */
+
+
+
+@media (max-width: 768px) {
+
+  
+/* =====parent-page=== */
+.scroll-parent{
+  width: 95%;
+  height: 70vh;
+}
+.agree-btn{
+  width: 95%;
+}
+ /* ======================CARD============================ */
+
+.next-btn button{
+  /* width: 15%; */
+  margin-top: 1%;
+  margin-left: -50px;
+  
+}
+ 
+.content-select svg{
+  width: 65%;
+  margin-top: 15%;
+  margin-left: 5px;
+ }
+
+ /* profile */
+ .create-user{
+  width: 95%;
+  flex-direction: column;
+
+  }
+  .profile{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    /* margin-bottom  : 30px;   */
+   
+  } 
+  .avatar img{
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
+  .next-b button{
+    right: 32px;
+    max-width: 110px;  
+    margin-top: 10%;
+    transform: translatey(19%);
+  }
+
+}
+
+
+
+
+@media (max-width: 924px) {
+  #content,
+  #kids,
+  #parent {
+    margin: 11rem auto;
+    height: 80vh;
+    width: 90%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-flow: column;
+    border-radius: 2%;
+    position: relative;
+    overflow: hidden;
+  } 
+
+  #content p {
+    margin-top: 2rem;
+  }
+
+  
+}
+

@@ -1,0 +1,159 @@
+
+  /* Media query for screens up to 1020 pixels */
+  @media only screen and (max-width: 1020px) {
+   
+    /* body{
+      overflow-x: hidden;
+    } */
+    .container {
+      flex-direction: column; 
+      overflow: hidden;
+    }
+  
+    .play-container {
+      width: 100%; 
+    }
+  
+    .right-sidebar {
+      width: 100%; 
+    }
+    iframe{
+        width: 110%;
+        height: 50vh;
+      border-radius: 10px;
+      }
+
+      /* search box */
+      .nav-middle .search-box {
+        width: 400px;
+      }
+
+
+      /* vid info */
+      .divide h3 {
+        flex: 1;
+    }
+    .play-vid-info .divide {
+      flex-direction: column; 
+    }
+  
+    #subcribe-btn {
+      margin-top: 10px; 
+      order: 1;
+    }
+   
+    .play-vid-info #coco{
+    transform: translate(0);
+}
+
+.right-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.vid-list {
+  width: 40%; 
+  box-sizing: border-box;
+  margin: 20px auto;
+}
+
+  }
+
+  /* small screen search====================================== */
+  @media only screen and (max-width: 764px) {
+    .nav-middle .search-box {
+        width: 250px;
+      }
+      nav{
+        width: 100%;
+      }
+      .nav-right p{
+        visibility: hidden;
+      }
+      .nav-left .menu-icon{
+       display: none;
+      }
+     
+  }
+
+  @media only screen and (max-width: 500px){
+
+    .flex-div{
+      width: 100%;
+    }
+    .vid-list {
+       /* margin: 10px auto; */
+       width: 80%;
+       transform: translate(-1px, 10px);
+     }
+   
+   .nav-middle .search-box{
+    visibility: hidden;
+   padding: 15px 20px;
+   border-radius: 50px;
+   margin: 0 ;
+   }
+  
+   img.mic-icon{
+       visibility: visible;
+       position: sticky;
+       left: 160px;
+   }
+  
+  
+   .nav-middle .mic-icon {
+       min-width: 50px;
+       position: absolute;
+       padding: 10.5px 0;   
+       transform: translateX(-90%);
+       border-radius: 50%;
+       aspect-ratio: 1/1;
+  }
+  nav.scrolled {
+   min-width: 100%;
+   overflow: hidden;
+  }
+  .nav-left .avater{
+   width: 51px;
+  }
+  .nav-right .user-icon{
+    transform: translate(20px,-7px);
+  }
+  
+  iframe{
+    width: 120%;
+  border-radius: 10px;
+  }
+  .divide h3 {
+    font-size: 20px;
+  }
+
+  }
+  
+
+  /* mobile for vid-list */
+@media only screen and (max-width: 480px) {
+  .right-sidebar {
+    margin: 0 auto;
+  }
+
+  .vid-list {
+    width: 80%; 
+  }
+ 
+  .nav-middle .search-box {
+    width: 200px;
+  }
+.play-video{
+  margin: 0;
+}
+#play-vid {
+  margin: 0;
+}
+iframe{
+  width: 130%;
+border-radius: 10px;
+transform: translateX(-8px);
+}
+}

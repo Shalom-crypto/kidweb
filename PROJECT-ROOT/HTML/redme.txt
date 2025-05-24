@@ -1,0 +1,254 @@
+@media (max-width:500px){
+    .signin-modal {
+        padding: 40px 15px;
+        
+    }
+    .signin-form input {
+        padding: 0.75rem ;
+    }
+    
+    img#eye{
+        bottom:113px;
+        width: 20px;
+    }
+
+    /* .flex-div{
+        width: 100%;
+
+    } */
+    
+    /* body{
+        overflow-x:  hidden;
+    } */
+}
+
+
+/* -----------MAIN MQ---------------------------- */
+@media (max-width:900px){
+    .menu-icon{
+        display:none ;
+    }
+   
+    .nav-right img{
+        display: none;
+    }
+    .nav-right .user-icon{
+        display: block;
+        width: 30px;
+        margin-bottom: 20px;
+        margin-left: -20px;
+    }
+    .nav-right .user-icon:hover{
+        scale: none;
+    }
+
+    .nav-middle .search-box input{
+        width: 300px;
+    }
+    .logo{
+        width: 90px;
+    }
+    .shortcut-links a img {
+        margin-right: 15px;
+    }
+ 
+}
+
+
+
+/* side bar ================================================ */
+@media (max-width: 1020px) {
+
+  .container, .large-container{
+        /* display: none   ; */
+        margin-top: 140px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .sidebar.scrolled {
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+      }
+      
+.sidebar {
+
+  position: fixed;
+  top: 110px;
+  width: 110%;
+  left: -51px;
+  height: 100px;
+  z-index: 10;
+  margin-top: 0px;
+  overflow: hidden;
+}
+
+.shortcut-links {
+flex-direction: row;
+/* transform: translateY(-135%); */
+justify-content: center;
+
+}
+/* 
+.shortcut-links a img{
+    margin: 8px;
+}
+    margin-right: 40px;
+     */
+
+.nav-left .menu-icon {
+    display: none;
+}
+div#imgtwo, #imgthree,#imgFour,#imgfive{
+    height: 0;
+}
+
+
+img#showsImage{
+    transform: translateY(9%);
+ }
+div#loveIcon,.shortcut-links{
+ height: 0;
+ transform: translateY(-100px);
+}
+img#showsImage.set {
+    transform: translateY(-9%);
+    padding-top:0 ;
+}
+
+.nav-middle .search-box input{
+    width: 500px;
+} 
+
+.showsvid{
+  transform: translate(-50%, -50%);
+}
+.vid-list {
+    width: 85%;
+}
+
+}
+
+
+
+
+/*  mid mobile screen ================================================ */
+@media only screen and (max-width: 764px) {
+    .nav-middle .search-box {
+        /* display: none; */
+        width: 250px;
+      }
+      div.sidebar{
+        width: 100%;
+         margin: auto 55px;
+        overflow: hidden;
+        display: none;
+     
+      } 
+
+      
+      .nav-right p{
+        visibility: hidden;
+      }
+      .nav-left .menu-icon{
+       display: none;
+      }
+      
+      .vid-list {
+        width: 100%;
+        margin: auto;
+    }
+
+
+  }
+  @media only screen and (max-width: 480px){
+     .vid-list {
+        margin:  auto;
+        width: 100%;
+        transform: translate(-1px, 10px);
+        position: relative;
+      }
+      div#searchBox{
+        visibility: hidden;
+        position: relative;
+        left: -80px; 
+        width: 290px;
+        height: 60px;
+        
+        
+    }
+    img.mic-icon{
+        visibility: visible;
+        position: sticky;
+        left: 235px;
+    }
+    .nav-middle .mic-icon {
+        min-width: 51px;
+        background-color: rgb(231, 21, 21);
+        position: absolute;
+        padding: 10.5px 0;
+        right: 0;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+  }
+        img.user-icon{
+            position: absolute;
+            right: 90px;
+            bottom: -23px;
+        }
+}
+
+
+@media screen and (max-width: 684px) and (min-width: 401px) {
+    .vid-list {
+        width: 60%;
+        transform: translate(10px, 10px);
+        transform: translate(-25px, 10px);
+    }
+    .vid-list .thumbnail {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    
+
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const nav = document.querySelector('nav');
+    const searchIcon = document.getElementById('searchIcon');
+    const searchBox = document.getElementById('searchBox');
+    const navLeft = document.querySelector('.nav-left');
+    const navRight = document.querySelector('.nav-right');
+    const navMiddle = document.querySelector('.nav-middle');
+    const micIcon = document.querySelector('.mic-icon');
+
+
+
+    // Show search box when mic icon is clicked
+    searchIcon.addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the click event from propagating to document
+        // Check if viewport matches the desired width
+        if (window.matchMedia("(max-width: 500px)").matches) {
+            showSearchBox();
+        }
+    });
+
+    // Hide search box when clicking outside of it
+    document.addEventListener('click', function(event) {
+        if (!searchBox.contains(event.target) && event.target !== searchIcon) {
+            hideSearchBox();
+        }
+    });
+
+    // Event listener for mic icon click to move it left
+    micIcon.addEventListener('click', function(event) {
+        micIcon.classList.toggle('moved-left');
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!searchBox.contains(event.target) && event.target !== searchIcon) {
+            hideSearchBox();
+            micIcon.classList.remove('moved-left');
+        }
+    });
